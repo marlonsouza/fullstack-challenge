@@ -1,17 +1,16 @@
 <div class="container">
-
-  <div>
+ <div class="row">
+    <div class="jumbotron text-center">
+          <h1>Palindrome</h1>
+          <p class="lead">
+            <input ng-model="main.word">
+          </p>
+          <p>
+            <button type="button" class="btn btn-lg btn-success" ng-click="main.isPalindrome(main.word)">Go!</button>
+          </p>
+        </div>
+      <div class="col col-md-offset-3 col-md-6 text-center" ng-class="{'alert alert-success': main.result.success, 'alert alert-danger': main.result.error}" role="alert">
+        <h2>{{main.result.message}}</h2>
+      </div>
   </div>
-
-  <div class="jumbotron text-center">
-    <h1>Palindrome</h1>
-    <p class="lead">
-      <input ng-model="main.word">
-    </p>
-    <p>
-      <button type="button" class="btn btn-lg btn-success" ng-click="main.isPalindrome(main.word)">Go!</button>
-    </p>
-    <p><h1>{{main.result}}</h1></p>
-  </div>
-
 </div>

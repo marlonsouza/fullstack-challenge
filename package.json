@@ -1,0 +1,20 @@
+{
+  "name": "fullstack-challenge",
+  "version": "1.0.0",
+  "description": "api -> npm start",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marlonsouza/fullstack-challenge.git"
+  },
+  "author": "marlonsouza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marlonsouza/fullstack-challenge/issues"
+  },
+  "homepage": "https://github.com/marlonsouza/fullstack-challenge#readme"
+}

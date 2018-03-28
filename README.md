@@ -1,7 +1,7 @@
 # fullstack-challenge
 
-api -> npm install && node app.js
+api -> npm start
 
-front-end -> npm install && bower install && gulp serve
+front-end -> npm start
 
 Thanks, Márlon.

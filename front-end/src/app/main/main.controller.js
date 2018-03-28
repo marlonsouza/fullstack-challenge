@@ -6,10 +6,10 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, PalindromeApi, $log) {
+  function MainController($timeout, PalindromeApi) {
     var vm = this;
 
-    vm.result = '';
+    vm.result = {};
     vm.isPalindrome = isPalindrome;
 
     activate();
@@ -19,11 +19,21 @@
     }
 
     function isPalindrome(word) {
+      if(!word){
+        vm.result = {};
+        vm.result.message = "Enter then word";
+        vm.result.error = true;
+        return;
+      }
+
       PalindromeApi.get(word).then(function(resp){
-        vm.result = resp.message;
-        $log.log(resp.message);
+        vm.result = {};
+        vm.result.message = resp.message;
+        vm.result.success = true;
       }, function(err){
-        vm.result = err.data.message;
+        vm.result = {};
+        vm.result.message = err.data.message;
+        vm.result.error = true;
       });
     }
 
